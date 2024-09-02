@@ -94,7 +94,7 @@ class VolBriController:
         print(int(bright))
         sbc.set_brightness(bright, display=0)
         cv.rectangle(frame, self.bright_cords[0], self.bright_cords[1], self.colors['Purple'], 2)
-        cv.rectangle(frame, ((self.bright_cords[0][0] + 5), 490), ((self.bright_cords[1][0] - 5), int(bribar)), self.colors['White'], -1)
+        cv.rectangle(frame, ((self.bright_cords[0][0] + 5), 490), ((self.bright_cords[1][0] - 5), int(bribar)), self.colors['Red'], -1)
         cv.putText(frame, f'{int(briper)}%', (self.bright_cords[1][0], self.bright_cords[1][1] - 30), cv.FONT_ITALIC, 1, self.colors['Black'], 2)
         print('Brightness')
 
@@ -109,7 +109,7 @@ class VolBriController:
         print(int(vol))
         self.volume.SetMasterVolumeLevel(vol, None)
         cv.rectangle(frame, self.volume_cords[0], self.volume_cords[1], self.colors['Purple'], 2)
-        cv.rectangle(frame, ((self.volume_cords[0][0] + 5), 490), ((self.volume_cords[1][0] - 5), int(volbar)), self.colors['White'], -1)
+        cv.rectangle(frame, ((self.volume_cords[0][0] + 5), 490), ((self.volume_cords[1][0] - 5), int(volbar)), self.colors['Red'], -1)
         cv.putText(frame, f'{int(volper)}%', (self.volume_cords[1][0], self.volume_cords[1][1] - 30), cv.FONT_ITALIC, 1, self.colors['Black'], 2)
         print('Volume')
 
